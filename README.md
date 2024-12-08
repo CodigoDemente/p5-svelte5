@@ -7,7 +7,7 @@
 <h1 align="center">p5-svelte5</h1>
 
 <p align="center">
-<a href="https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/CodigoDemente/p5-svelte5/Build%20CI?logo=github" alt="Build CI"></a>
+<a href="https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml?branch=main"><img src="https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml/badge.svg" alt="Build CI"></a>
 <a href="https://app.netlify.com/sites/p5-svelte5/deploys"><img src="https://img.shields.io/netlify/7dd33ce7-b638-4540-83d1-4442ef026efc?logo=netlify&logoColor=white" alt="Netlify Status"></a>
 <a href="https://www.npmjs.com/package/p5-svelte5"><img src="https://img.shields.io/npm/v/p5-svelte5?color=%23ed225d" alt="NPM version"></a>
 </p>
