@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { HighlightAuto, HighlightSvelte } from 'svelte-highlight';
-	import blackMetalBathory from 'svelte-highlight/src/styles/synth-midnight-terminal-dark';
-	import { sketchExampleCode, type Language } from '../helpers/sketchExampleCode';
-	import { copyToClipboard } from '$helpers/clipboard';
+	import DOMPurify from 'dompurify';
+	import blackMetalBathory from 'svelte-highlight/styles/black-metal-bathory';
+	import { sketchExampleCode, type Language } from '$helpers/docs/sketchExampleCode.js';
+	import { copyToClipboard } from '$helpers/clipboard.js';
 	import { toast } from '@zerodevx/svelte-toast';
 
 	export let code: string;
@@ -23,10 +24,11 @@
 </script>
 
 <svelte:head>
-	{@html blackMetalBathory}
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html DOMPurify.sanitize(blackMetalBathory)}
 </svelte:head>
 
-<div class="relative my-3 border border-p5/40 rounded-md overflow-hidden">
+<div class="relative my-3 overflow-hidden rounded-md border border-p5/40">
 	<div bind:this={innerCode}>
 		{#if isThisIshSvelte}
 			<HighlightSvelte code={isSketch ? sketchExampleCode(code, lang) : code} />
@@ -34,7 +36,7 @@
 			<HighlightAuto {code} />
 		{/if}
 	</div>
-	<button class="absolute top-4 right-4" on:click={copy}>
+	<button class="absolute right-4 top-4" on:click={copy}>
 		<span class="sr-only">copy</span>
 		<svg
 			role="presentation"
@@ -45,7 +47,7 @@
 			stroke-width="2"
 			stroke-linecap="round"
 			stroke-linejoin="round"
-			class="w-5 h-5 opacity-50 hover:opacity-100 focus:opacity-100 hover:text-p5 transition-all duration-75"
+			class="h-5 w-5 opacity-50 transition-all duration-75 hover:text-p5 hover:opacity-100 focus:opacity-100"
 			><path
 				d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"
 			/><path
@@ -55,8 +57,9 @@
 	</button>
 </div>
 
-<style>
+<style lang="scss">
 	:global(.hljs) {
-		@apply rounded-md border-0;
+		border: 0;
+		border-radius: 0.375rem; /* equivalent to rounded-md */
 	}
 </style>

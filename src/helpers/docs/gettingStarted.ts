@@ -1,5 +1,5 @@
-export default `<script>
-  import P5 from 'p5-svelte';
+export default `<script lang="ts">
+  import P5 from 'p5-svelte5';
   let width = 55;
   let height = 55;
 

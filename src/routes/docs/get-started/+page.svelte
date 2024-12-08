@@ -1,8 +1,8 @@
 <script lang="ts">
 	import P5 from '$lib/P5.svelte';
-	import type { Sketch } from '$lib';
+	import type { Sketch } from '$lib/index.js';
 	import CodeBlock from '$components/CodeBlock.svelte';
-	import gettingStartedExample from '$helpers/gettingStartedExample';
+	import gettingStartedExample from '$helpers/docs/gettingStarted.js';
 	import RangeSlider from 'svelte-range-slider-pips';
 
 	let dimensions = [180, 130];
@@ -36,15 +36,15 @@
 	</p>
 	<section id="installation">
 		<h3>Installation</h3>
-		<CodeBlock code="pnpm i p5-svelte" />
+		<CodeBlock code="pnpm i p5-svelte5" />
 		<p>
-			Depending on your environment, you may be alerted upon installing <code>p5-svelte</code> that
+			Depending on your environment, you may be alerted upon installing <code>p5-svelte5</code> that
 			<code>p5</code>
 			is a required peer dependency which you must install yourself. Thus do:
 		</p>
 		<CodeBlock code="pnpm i -D p5" />
 		<p>
-			Then import the exported <code>P5</code> component from <code>p5-svelte</code> into your desired
+			Then import the exported <code>P5</code> component from <code>p5-svelte5</code> into your desired
 			component.
 		</p>
 		<section>
@@ -53,7 +53,7 @@
 		</section>
 		<h3 class="text-xl">Output</h3>
 
-		<div class="border border-p5/40 rounded-md overflow-hidden mt-3">
+		<div class="mt-3 overflow-hidden rounded-md border border-p5/40">
 			<P5 {sketch} />
 		</div>
 
