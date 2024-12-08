@@ -1,15 +1,15 @@
 <br>
 
 <div align="center">
-<img src="https://github.com/tonyketcham/p5-svelte/raw/main/static/logo.svg" alt="p5-svelte logo" width="80" />
+<img src="https://raw.githubusercontent.com/CodigoDemente/p5-svelte5/refs/heads/main/static/logo.svg" alt="p5-svelte5 logo" width="80" />
 </div>
 
-<h1 align="center">p5-Svelte</h1>
+<h1 align="center">p5-svelte5</h1>
 
 <p align="center">
-<a href="https://github.com/tonyketcham/p5-svelte/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/tonyketcham/p5-svelte/Build%20CI?logo=github" alt="Build CI"></a>
-<a href="https://app.netlify.com/sites/p5-svelte/deploys"><img src="https://img.shields.io/netlify/7dd33ce7-b638-4540-83d1-4442ef026efc?logo=netlify&logoColor=white" alt="Netlify Status"></a>
-<a href="https://www.npmjs.com/package/p5-svelte"><img src="https://img.shields.io/npm/v/p5-svelte?color=%23ed225d" alt="NPM version"></a>
+<a href="https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/CodigoDemente/p5-svelte5/Build%20CI?logo=github" alt="Build CI"></a>
+<a href="https://app.netlify.com/sites/p5-svelte5/deploys"><img src="https://img.shields.io/netlify/7dd33ce7-b638-4540-83d1-4442ef026efc?logo=netlify&logoColor=white" alt="Netlify Status"></a>
+<a href="https://www.npmjs.com/package/p5-svelte5"><img src="https://img.shields.io/npm/v/p5-svelte5?color=%23ed225d" alt="NPM version"></a>
 </p>
 
 Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.
@@ -17,7 +17,7 @@ Trying to get <a href="https://p5js.org/">p5</a> up and running in [Svelte](http
 The API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can make use of Svelte's reactivity system to bind props or params within your p5 sketch just as you would with regular Svelte! You can even have multiple p5 components per page without any scoping issues!
 
 <p align="center">
-	<a href="https://p5-svelte.netlify.app/" target="_blank">📘 Docs + Examples</a>
+	<a href="https://p5-svelte5.netlify.app/" target="_blank">📘 Docs + Examples</a>
 </p>
 
 <p align="center">
@@ -29,20 +29,20 @@ The API is super simple; you get a <code>P5</code> component which accepts a <co
 ### Install:
 
 ```ps
-pnpm i p5-svelte
+pnpm i p5-svelte5
 ```
 
-Depending on your environment, you may be alerted upon installing `p5-svelte` that `p5` is a required peer dependency which you must install yourself. Thus do:
+Depending on your environment, you may be alerted upon installing `p5-svelte5` that `p5` is a required peer dependency which you must install yourself. Thus do:
 
 ```ps
 pnpm i -D p5
 ```
 
-Now add `p5-svelte` to your project (ex. `src/App.svelte`):
+Now add `p5-svelte5` to your project (ex. `src/App.svelte`):
 
 ```svelte
-<script>
-	import P5 from 'p5-svelte';
+<script lang="ts">
+	import P5 from 'p5-svelte5';
 	let width = 55;
 	let height = 55;
 
@@ -93,7 +93,7 @@ Svelte doesn't allow us to globally expose the p5 library by installing it to th
 
 ## Debug Mode
 
-You can access the internals of your p5 instance and the available native classes that `p5-svelte` automatically makes available to your project via passing the `debug` prop:
+You can access the internals of your p5 instance and the available native classes that `p5-svelte5` automatically makes available to your project via passing the `debug` prop:
 
 ```svelte
 <P5 {sketch} debug />
@@ -113,7 +113,7 @@ This event fires on init of the p5 project instance, emitting a reference to tha
 
 ## TypeScript support + Intellisense
 
-`p5-svelte` exposes a `Sketch` type representing the p5 sketch in instance mode. This gives your editor prying eyes into p5's type system, supports autocomplete, and inline documentation of all the p5 goodies to make your life a little easier.
+`p5-svelte5` exposes a `Sketch` type representing the p5 sketch in instance mode. This gives your editor prying eyes into p5's type system, supports autocomplete, and inline documentation of all the p5 goodies to make your life a little easier.
 
 ### 😤 Before
 

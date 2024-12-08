@@ -12,21 +12,20 @@
 	$: isClickable = rootroute !== '#' ? 'hover:bg-white/10' : '';
 </script>
 
-<aside class="sticky top-20 h-full mr-3 border-r border-white/10 w-56">
+<aside class="sticky top-20 mr-3 h-full w-56 border-r border-white/10">
 	<div class="border-b border-white/10">
-		<a sveltekit:prefetch href={rootroute}>
-			<h1 class="py-2 m-2 text-lg text-center border border-white/10 rounded {isClickable}">
+		<a href={rootroute}>
+			<h1 class="m-2 rounded border border-white/10 py-2 text-center text-lg {isClickable}">
 				{header}
 			</h1>
 		</a>
 	</div>
-	<ul class="py-2 space-y-2">
-		{#each elements as example, i (example.route)}
+	<ul class="space-y-2 py-2">
+		{#each elements as example (example.route)}
 			<li>
 				<a
 					href={example.route}
-					sveltekit:prefetch
-					class="text-p5 bg-p5/20 hover:text-white hover:bg-white/20 block px-2 py-1 mx-2 rounded {$page.url.pathname.startsWith(
+					class="mx-2 block rounded bg-p5/20 px-2 py-1 text-p5 hover:bg-white/20 hover:text-white {$page.url.pathname.startsWith(
 						example.route
 					)
 						? 'outline outline-1'

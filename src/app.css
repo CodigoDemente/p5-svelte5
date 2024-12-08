@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +18,7 @@ body {
 }
 
 article.doc {
-	@apply flex flex-col space-y-3 max-w-[90ch];
+	@apply flex max-w-[90ch] flex-col space-y-3;
 }
 
 article > section,
@@ -24,22 +27,22 @@ article > * > section {
 }
 
 p > a {
-	@apply border-b-2 bg-gray-700 bg-opacity-40 border-p5/80 py-0.5 px-1 font-medium text-gray-50 tracking-wide;
+	@apply border-b-2 border-p5/80 bg-gray-700 bg-opacity-40 px-1 py-0.5 font-medium tracking-wide text-gray-50;
 	@apply hover:border-p5 hover:text-p5 focus:border-p5 focus:text-p5;
 	@apply motion-safe:transition-colors;
 }
 
 p {
-	@apply py-0.5 text-gray-300 font-sans text-lg font-light opacity-90;
+	@apply py-0.5 font-sans text-lg font-light text-gray-300 opacity-90;
 }
 code {
-	@apply bg-gray-700/60 py-0.5 px-1 rounded border border-gray-600/30 text-white;
+	@apply rounded border border-gray-600/30 bg-gray-700/60 px-1 py-0.5 text-white;
 }
 h3 {
-	@apply text-2xl pt-7 font-semibold text-p5/80 leading-6;
+	@apply pt-7 text-2xl font-semibold leading-6 text-p5/80;
 }
 h4 {
-	@apply text-xl pt-3 font-semibold text-p5/80 leading-6;
+	@apply pt-3 text-xl font-semibold leading-6 text-p5/80;
 }
 
 /* Works on Firefox */

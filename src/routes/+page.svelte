@@ -1,6 +1,6 @@
 <script lang="ts">
 	import P5 from '$lib/P5.svelte';
-	import type { Sketch } from '$lib/types';
+	import type { Sketch } from '$lib/types.js';
 	import RangeSlider from 'svelte-range-slider-pips';
 
 	let branchHeight = [150];
@@ -59,19 +59,19 @@
 </script>
 
 <svelte:head>
-	<title>p5-svelte</title>
+	<title>p5-svelte5</title>
 </svelte:head>
 
-<main class="h-full grid place-items-center font-mono overflow-hidden">
-	<section class="flex flex-col relative justify-center items-center">
-		<div class="absolute top-[40%] text-xl flex flex-col items-center gap-4">
-			<img src="/logo.svg" alt="p5.js logo" class="w-[60px] z-50 drop-shadow-lg" />
+<main class="grid h-full place-items-center overflow-hidden font-mono">
+	<section class="relative flex flex-col items-center justify-center">
+		<div class="absolute top-[40%] flex flex-col items-center gap-4 text-xl">
+			<img src="/logo.svg" alt="p5.js logo" class="z-50 w-[60px] drop-shadow-lg" />
 		</div>
 
 		<P5 {sketch} debug />
 
-		<div class="z-50 relative bottom-36 flex flex-col gap-20 items-center">
-			<div class="flex relative left-[46px] drop-shadow-lg">
+		<div class="relative bottom-36 z-50 flex flex-col items-center gap-20">
+			<div class="relative left-[46px] flex drop-shadow-lg">
 				<a
 					href="https://p5js.org/"
 					aria-label="p5 Docs"
@@ -93,7 +93,7 @@
 				style="--range-handle-focus:#ed225d; --range-handle:#ed225daa; --range-handle-inactive:#ed225d;--range-slider:#fff1"
 			>
 				<RangeSlider bind:values={branchHeight} min={40} max={260} float />
-				<p class="font-mono text-center text-p5">Branch height</p>
+				<p class="text-center font-mono text-p5">Branch height</p>
 			</div>
 		</div>
 	</section>

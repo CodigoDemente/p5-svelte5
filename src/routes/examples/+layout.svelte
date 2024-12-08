@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import MainContainer from '$components/MainContainer.svelte';
 	import Sidebar from '$components/Sidebar.svelte';
 
@@ -24,7 +24,7 @@
 
 <MainContainer>
 	<Sidebar header="🌱 Examples" rootroute="/examples" elements={examples} />
-	<div class="overflow-auto p-6 flex-1">
+	<div class="flex-1 overflow-auto p-6">
 		<div class="max-w-[90ch]">
 			<slot />
 		</div>

@@ -1,24 +1,35 @@
 <script lang="ts">
-	import { onMount, createEventDispatcher } from 'svelte';
+	import { onMount } from 'svelte';
 	import type p5 from 'p5';
-	import type { Sketch } from '$lib/types';
+	import type { Sketch } from '$lib/types.js';
 
 	// Component props
-	export let target: HTMLElement = undefined;
-	export let sketch: Sketch = undefined;
-	export let parentDivStyle: string = 'display: block;';
-	export let debug = false;
+	interface Props {
+		target?: HTMLElement;
+		sketch: Sketch;
+		parentDivStyle?: string;
+		debug?: boolean;
+		ref?: (ref: HTMLElement) => void;
+		instance?: (p5: p5) => void;
+	}
 
-	let project: p5 = undefined;
+	let {
+		target = undefined,
+		sketch,
+		parentDivStyle = 'display: block;',
+		debug = false,
+		ref = undefined,
+		instance = undefined,
+	}: Props = $props();
 
-	// Event generation
-	const event = createEventDispatcher();
+	let project: p5;
+
 	const dispatch = {
 		ref() {
-			event('ref', target);
+			ref?.call(this, target!);
 		},
 		instance() {
-			event('instance', project);
+			instance?.call(this, project);
 		},
 	};
 
@@ -26,7 +37,7 @@
 	 * Creates a reference for the p5 instance to render within
 	 * @param {HTMLElement} node
 	 */
-	function ref(node: HTMLElement) {
+	function setRef(node: HTMLElement) {
 		target = node;
 		return {
 			destroy() {
@@ -35,11 +46,13 @@
 		};
 	}
 
-	function augmentClasses<NativeClasses extends [string, Record<string, any>][]>(
+	function augmentClasses<NativeClasses extends [string, unknown][]>(
 		instance: p5,
 		classes: NativeClasses
 	) {
-		classes.forEach(([key, value]) => (instance[key] = value));
+		classes.forEach(([key, value]) =>
+			Object.defineProperty(instance, key, value as PropertyDescriptor)
+		);
 		return instance;
 	}
 
@@ -67,8 +80,10 @@
 			}
 
 			// Set up a global object to capture this instance.
-			// @ts-ignore
-			window._p5Instance = instance;
+			Object.defineProperty(window, '_p5Instance', {
+				value: instance,
+				writable: false,
+			});
 			return sketch(instance);
 		}, target);
 
@@ -78,4 +93,4 @@
 	});
 </script>
 
-<div use:ref style={parentDivStyle} class="m-0" />
+<div use:setRef style={parentDivStyle} class="m-0"></div>
