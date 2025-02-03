@@ -16,10 +16,10 @@ importers:
         version: 1.2.4(eslint@9.16.0(jiti@1.21.6))
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
-        version: 3.3.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))
+        version: 3.3.1(@sveltejs/kit@2.17.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))
       '@sveltejs/kit':
         specifier: ^2.9.0
-        version: 2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))
+        version: 2.17.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))
       '@sveltejs/package':
         specifier: ^2.0.0
         version: 2.3.7(svelte@5.8.1)(typescript@5.7.2)
@@ -795,8 +795,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/kit@2.9.0':
-    resolution: {integrity: sha512-W3E7ed3ChB6kPqRs2H7tcHp+Z7oiTFC6m+lLyAQQuyXeqw6LdNuuwEUla+5VM0OGgqQD+cYD6+7Xq80vVm17Vg==}
+  '@sveltejs/kit@2.17.0':
+    resolution: {integrity: sha512-ziHgZSSMTv3cd3Pd1n0eWJFOgF2T5sdwAYgMufdbDhSq1vNNp/gjtCKpDi9WNGq2oUNEg6ltKT+nTl5hU7wmYQ==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1368,6 +1368,9 @@ packages:
   esm-env@1.2.1:
     resolution: {integrity: sha512-U9JedYYjCnadUlXk7e1Kr+aENQhtUaoaV9+gZm1T8LC/YBAPJx3NSPIAurFOC0U5vrdSevnUJS2/wUVxGwPhng==}
 
+  esm-env@1.2.2:
+    resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
+
   espree@10.3.0:
     resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1550,15 +1553,9 @@ packages:
     resolution: {integrity: sha512-49TewVEz0UxZjr1WYYsWpPrhyC/B/pA8Bq0fUmet2n+eR7yn0IvNzNaoBwnK6mdkzcN+se7Ez9zUgULTz2QH4g==}
     engines: {node: '>=18'}
 
-  globalyzer@0.1.0:
-    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
-
   globby@14.0.2:
     resolution: {integrity: sha512-s3Fq41ZVh7vbbe2PN3nrW7yC7U7MFVc5c98/iTl9c2GawNMKx/J648KQRW6WKkuU8GIbbh2IXfIRQjOZnXcTnw==}
     engines: {node: '>=18'}
-
-  globrex@0.1.2:
-    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
   graceful-fs@4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
@@ -1837,6 +1834,9 @@ packages:
 
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
+
+  magic-string@0.30.17:
+    resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
   marked-terminal@7.2.1:
     resolution: {integrity: sha512-rQ1MoMFXZICWNsKMiiHwP/Z+92PLKskTPXj+e7uwXmuMPkNn7iTqC+IvDekVm1MPeC9wYQeLxeFaOvudRR/XbQ==}
@@ -2678,9 +2678,6 @@ packages:
     resolution: {integrity: sha512-75voc/9G4rDIJleOo4jPvN4/YC4GRZrY8yy1uU4lwrB3XEQbWve8zXoO5No4eFrGcTAMYyoY67p8jRQdtA1HbA==}
     engines: {node: '>=12'}
 
-  tiny-glob@0.2.9:
-    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
-
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
 
@@ -3511,27 +3508,26 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))':
+  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.17.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))':
     dependencies:
-      '@sveltejs/kit': 2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))
+      '@sveltejs/kit': 2.17.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))':
+  '@sveltejs/kit@2.17.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)))(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.8.1)(vite@6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1))
       '@types/cookie': 0.6.0
       cookie: 1.0.2
       devalue: 5.1.1
-      esm-env: 1.2.1
+      esm-env: 1.2.2
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.14
+      magic-string: 0.30.17
       mrmime: 2.0.0
       sade: 1.8.1
       set-cookie-parser: 2.7.1
       sirv: 3.0.0
       svelte: 5.8.1
-      tiny-glob: 0.2.9
       vite: 6.0.3(jiti@1.21.6)(sass@1.82.0)(yaml@2.6.1)
 
   '@sveltejs/package@2.3.7(svelte@5.8.1)(typescript@5.7.2)':
@@ -4170,6 +4166,8 @@ snapshots:
 
   esm-env@1.2.1: {}
 
+  esm-env@1.2.2: {}
+
   espree@10.3.0:
     dependencies:
       acorn: 8.14.0
@@ -4369,8 +4367,6 @@ snapshots:
 
   globals@15.13.0: {}
 
-  globalyzer@0.1.0: {}
-
   globby@14.0.2:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
@@ -4379,8 +4375,6 @@ snapshots:
       path-type: 5.0.0
       slash: 5.1.0
       unicorn-magic: 0.1.0
-
-  globrex@0.1.2: {}
 
   graceful-fs@4.2.10: {}
 
@@ -4617,6 +4611,10 @@ snapshots:
   lru-cache@10.4.3: {}
 
   magic-string@0.30.14:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
+  magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -5338,11 +5336,6 @@ snapshots:
   time-span@5.1.0:
     dependencies:
       convert-hrtime: 5.0.0
-
-  tiny-glob@0.2.9:
-    dependencies:
-      globalyzer: 0.1.0
-      globrex: 0.1.2
 
   tinybench@2.9.0: {}
 
